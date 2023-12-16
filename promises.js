@@ -17,9 +17,10 @@ function onDone(data){
 readMe().then(onDone);
 
 
-//  how is promise
+
 // promise has pending, resolve, rejected
-// for promise you have to pass the function(resolve)       
+// for promise you have to pass the function(resolve)   
+
 // var asyn = new Promise(function(resolve){             // defining side
 //     resolve("iam promise");
 // });
