@@ -30,3 +30,24 @@ const ans = promisified(1000);
 ans.then(function(){
     console.log("timeout is done")
 })
+
+
+
+// resolve reject => promises
+// "reject" is another function used in Promises. It indicates that the asynchronous operation failed or encountered an error. 
+
+
+// function fetchData(simulateSuccess = True) {     // check when = false
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         if (simulateSuccess) {
+//           resolve( console.log("Hello, async/await!"));  // u can also do : {data: "Hello, async/await!"}
+//         } else {
+//           reject(new Error("Failed to fetch data"));
+//         }
+//       }, 2000);
+//     });
+    
+//   }
+  
+// fetchData();
