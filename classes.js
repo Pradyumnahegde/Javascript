@@ -70,3 +70,32 @@ alice.greet();
 alice.study();
 mrSmith.greet();
 mrSmith.teach();
+
+
+// Prototypical inheritence
+
+function Vehicle(make, model) {
+    this.make = make;
+    this.model = model;
+}
+
+Vehicle.prototype.startEngine = function() {
+    console.log(`The ${this.make} ${this.model}'s engine has started.`);
+};
+
+function Car(make, model, color) {
+    Vehicle.call(this, make, model);
+    this.color = color;
+}
+
+Car.prototype = Object.create(Vehicle.prototype);
+Car.prototype.constructor = Car;
+
+Car.prototype.honk = function() {
+    console.log(`The ${this.color} ${this.make} ${this.model} is honking.`);
+};
+
+var myCar = new Car("BMW", "X1", "Blue");
+
+myCar.startEngine();
+myCar.honk();
